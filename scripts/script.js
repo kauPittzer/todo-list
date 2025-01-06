@@ -4,7 +4,6 @@ const completeList = document.querySelector(".list-tasks")
 
 let taskList = []
 
-
 function addNewTask() {
     taskList.push({
         task: input.value,
@@ -29,9 +28,9 @@ function showList() {
     })
 
     completeList.innerHTML = newList
-}
 
-button.addEventListener('click', addNewTask)
+    localStorage.setItem('lista', JSON.stringify(taskList))
+}
 
 function delTask(index) {
 
@@ -44,3 +43,12 @@ function checkTask(index){
     taskList[index].checked = !taskList[index].checked
     showList()
 }
+
+function taskReload(){
+    const localStorageTasks = localStorage.getItem('lista')
+    taskList = JSON.parse(localStorageTasks)
+    showList()
+}
+
+taskReload()
+button.addEventListener('click', addNewTask)
