@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <title>To do</title>
 </head>
 
 <body>
-    <div>
-        <input type="text" name="todo" id="itodo" placeholder="O que tenho que fazer?">
-        <button>Adicionar</button>
+    <div class="container-tarefa">
+        <input type="text" name="input-task" id="id-input-task" class="class-input-task"
+            placeholder="O que tenho que fazer?">
+        <button class="button-add-task">Adicionar</button>
 
-        <ul>
-            <li>
+        <ul class="list-tasks">
+            <li class="task">
+                <img src="./img/check.png" alt="alt-check-na-tarefa">
+                <p>%</p>
+                <img src="./img/deleteChain.png" alt="alt-deletar-tarefa">
+            </li>
+            <li class="task">
                 <img src="./img/check.png" alt="alt-check-na-tarefa">
                 <p>%</p>
                 <img src="./img/deleteChain.png" alt="alt-deletar-tarefa">
