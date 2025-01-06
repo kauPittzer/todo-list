@@ -68,12 +68,20 @@ body {
     margin-bottom: 15px;
     padding: 0 15px;
 }
-.task:hover img{
-    transition-duration: 0.3s;
-    opacity: 1;
-}
 
 img {
     opacity: 0;
     height: 25px;
+    transition: opacity .3s ease-in-out;
+}
+
+.task:hover img{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.done {
+    background-color: green;
+    color: white;
+    text-decoration: line-through;
 }
